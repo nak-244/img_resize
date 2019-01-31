@@ -144,18 +144,5 @@ $(function(){
         var n = parseInt(Math.floor(Math.log(e) / Math.log(1024)))
         return Math.round(e / Math.pow(1024, n)) + " " + t[n]
     }
-    //加工後のイメージを<input type=file>に変換する
-    function addFileList(input, url, file) {
-        if (typeof url === 'string')
-            url = [url]
-        else if (!Array.isArray(url)) {
-            throw new Error('url needs to be a file path string or an Array of file path strings')
-        }
-        const file_list = url.map(fp => file)
-        file_list.__proto__ = Object.create(FileList.prototype)
-        Object.defineProperty(input, 'files', {
-            value: file_list
-        })
-        return input
-    }
+
 })
