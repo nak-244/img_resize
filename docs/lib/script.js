@@ -97,8 +97,9 @@ $(function(){
                 //256x256より大きければサイズを縮小
                 if(this.naturalWidth > 240 || this.naturalHeight > 180){
                     //縮小時のアスペクト値を維持するための計算
-                    let resize = 240 / [this.naturalWidth, this.naturalHeight].sort()[1]
+                    let resize = 240 / [this.naturalWidth].sort()[1]
                     canvas.width = this.naturalWidth * resize
+                    let resize = 180 / [this.naturalHeight].sort()[2]
                     canvas.height = this.naturalHeight * resize
                     //あらかじめ白で塗りつぶす(透過色対策)
                     ctx.fillStyle="white";
