@@ -118,6 +118,12 @@ $(function(){
                 this.old_src = this.src
                 //イメージ形式をJpegへ変換
                 this.src = canvas.toDataURL()
+                // ダウンロードリンクを生成して出力
+                        var dlLink = document.createElement('a');
+                        dlLink.href = data;
+                        dlLink.download = 'sample.png';
+                        dlLink.innerText = 'ダウンロード';
+                        document.getElementById('result').appendChild(dlLink);
                 //再読込完了イベント
                 this.onload = function(){
                     //変換後のURLをセット
