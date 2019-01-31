@@ -159,12 +159,3 @@ $(function(){
         return input
     }
 })
-
-document.getElementById("download").onclick = (event) => {
-    let canvas = document.getElementById("canvas");
-
-    let link = document.createElement("a");
-    link.href = canvas.toDataURL("image/png");
-    link.download = "test.png";
-    link.click();
-}
