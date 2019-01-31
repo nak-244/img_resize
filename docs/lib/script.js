@@ -164,9 +164,5 @@ $(function(){
     dlLink.download = 'sample.png';
     dlLink.innerText = 'ダウンロード';
     document.getElementById('result').appendChild(dlLink);
-}
-}
-
-
 
 })
