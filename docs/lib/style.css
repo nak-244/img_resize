@@ -1,0 +1,10 @@
+.dropable_box, .result{
+    display: block;
+    width: 256px;
+    height: 256px;
+    margin: 20px;
+    border: solid 1px black;
+}
+ .info {
+    font-size: 8pt;
+ }
