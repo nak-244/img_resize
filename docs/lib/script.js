@@ -91,7 +91,7 @@ $(function(){
             image.src = blob_url //画像ファイルを読み込む
             //読み込み完了イベント
             image.onload = function(){
-                $("#info_before").html("File-Size: "+getSizeStr(bin.length)+"<br>Type: "+type+"</br>Image-Size: "+this.naturalWidth + " x " + this.naturalHeight)
+                $("#info_before").html("File-Size: "+getSizeStr(bin.length)+"<br>Image-Size: "+this.naturalWidth + " x " + this.naturalHeight)
                 let canvas = document.createElement("canvas") //キャンバスを作成
                 let ctx = canvas.getContext('2d')
                 //256x256より大きければサイズを縮小
