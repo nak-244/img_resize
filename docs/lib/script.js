@@ -16,7 +16,7 @@ $(function(){
             fr.readAsArrayBuffer(file) //読み込み開始
         })
     })
-    
+
     //ファイルタイプのチェック
     //Refference from https://stackoverflow.com/questions/18299806/how-to-check-file-mime-type-with-javascript-before-upload
     function checkFileType(e){
@@ -95,9 +95,9 @@ $(function(){
                 let canvas = document.createElement("canvas") //キャンバスを作成
                 let ctx = canvas.getContext('2d')
                 //256x256より大きければサイズを縮小
-                if(this.naturalWidth > 256 || this.naturalHeight > 256){
+                if(this.naturalWidth > 240 || this.naturalHeight > 180){
                     //縮小時のアスペクト値を維持するための計算
-                    let resize = 256 / [this.naturalWidth, this.naturalHeight].sort()[1] 
+                    let resize = 240 / [this.naturalWidth, this.naturalHeight].sort()[1]
                     canvas.width = this.naturalWidth * resize
                     canvas.height = this.naturalHeight * resize
                     //あらかじめ白で塗りつぶす(透過色対策)
