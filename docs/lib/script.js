@@ -158,11 +158,4 @@ $(function(){
         })
         return input
     }
-    // ダウンロードリンクを生成して出力
-    var dlLink = document.createElement('a');
-    dlLink.href = data;
-    dlLink.download = 'sample.png';
-    dlLink.innerText = 'ダウンロード';
-    document.getElementById('result').appendChild(dlLink);
-
 })
