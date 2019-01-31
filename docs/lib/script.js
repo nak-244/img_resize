@@ -95,9 +95,9 @@ $(function(){
                 let canvas = document.createElement("canvas") //キャンバスを作成
                 let ctx = canvas.getContext('2d')
                 //256x256より大きければサイズを縮小
-                if(this.naturalWidth > 300 || this.naturalHeight > 300){
+                if(this.naturalWidth > 256 || this.naturalHeight > 256){
                     //縮小時のアスペクト値を維持するための計算
-                    let resize = 300 / [this.naturalWidth, this.naturalHeight].sort()[1]
+                    let resize = 256 / [this.naturalWidth, this.naturalHeight].sort()[1]
                     canvas.width = this.naturalWidth * resize
                     canvas.height = this.naturalHeight * resize
                     //あらかじめ白で塗りつぶす(透過色対策)
@@ -158,4 +158,15 @@ $(function(){
         })
         return input
     }
+    // ダウンロードリンクを生成して出力
+    var dlLink = document.createElement('a');
+    dlLink.href = data;
+    dlLink.download = 'sample.png';
+    dlLink.innerText = 'ダウンロード';
+    document.getElementById('result').appendChild(dlLink);
+}
+}
+
+
+
 })
