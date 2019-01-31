@@ -4,7 +4,7 @@
 
 ## Author
 
-@nak-244
+Tsuyoshi Nakamura
 
 ## License
 
