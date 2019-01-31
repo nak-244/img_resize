@@ -95,8 +95,11 @@ $(function(){
                 let canvas = document.createElement("canvas") //キャンバスを作成
                 let ctx = canvas.getContext('2d')
                 //256x256より大きければサイズを縮小
-                if(this.naturalWidth > 240 || this.naturalHeight > 180){
-  
+                if(this.naturalWidth > 256 || this.naturalHeight > 256){
+                    //縮小時のアスペクト値を維持するための計算
+                    let resize = 256 / [this.naturalWidth, this.naturalHeight].sort()[1]
+                    canvas.width = this.naturalWidth * resize
+                    canvas.height = this.naturalHeight * resize
                     //あらかじめ白で塗りつぶす(透過色対策)
                     ctx.fillStyle="white";
                     ctx.fillRect(0,0,canvas.width,canvas.height);
