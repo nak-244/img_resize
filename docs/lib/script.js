@@ -94,10 +94,10 @@ $(function(){
                 $("#info_before").html("File-Size: "+getSizeStr(bin.length)+"<br>Type: "+type+"</br>Image-Size: "+this.naturalWidth + " x " + this.naturalHeight)
                 let canvas = document.createElement("canvas") //キャンバスを作成
                 let ctx = canvas.getContext('2d')
-                //256x256より大きければサイズを縮小
-                if(this.naturalWidth > 256 || this.naturalHeight > 256){
+                //240x240より大きければサイズを縮小
+                if(this.naturalWidth > 240 || this.naturalHeight > 240){
                     //縮小時のアスペクト値を維持するための計算
-                    let resize = 256 / [this.naturalWidth, this.naturalHeight].sort()[1]
+                    let resize = 240 / [this.naturalWidth, this.naturalHeight].sort()[1]
                     canvas.width = this.naturalWidth * resize
                     canvas.height = this.naturalHeight * resize
                     //あらかじめ白で塗りつぶす(透過色対策)
