@@ -130,7 +130,7 @@ $(function(){
                     xhr.onload = function() {
                         let bin = new Uint8Array(xhr.response)
                         //詳細表示
-                        $("#info_after").html("File-Size: "+getSizeStr(bin.length)+"<br>Type: image/jpeg</br>Image-Size: "+this.self.naturalWidth + " x " + this.self.naturalHeight)
+                        $("#info_after").html("File-Size: "+getSizeStr(bin.length)+"<br>Image-Size: "+this.self.naturalWidth + " x " + this.self.naturalHeight)
                     };
                     xhr.send();
                 }
